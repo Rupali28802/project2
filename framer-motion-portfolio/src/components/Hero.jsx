@@ -5,7 +5,7 @@ import heroImg from "../assets/hero.jpeg";
 
 function Hero() {
   return (
-    <section className="flex items-center justify-center min-h-[330px] pt-15">
+    <section className="flex items-center justify-center min-h-[350px] pt-15">
       <div className="bg-white p-10 w-full  border">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -39,18 +39,6 @@ function Hero() {
             </button>
           </motion.div>
 
-          {/* <motion.div
-            initial={{ opacity: 0, y: 120 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="flex justify-center"
-          >
-            <img
-              src={heroImg}
-              alt="hero"
-              className="w-[330px] h-[330px] object-cover  mr-20 "
-            />
-          </motion.div> */}
           <motion.div
             initial={{ opacity: 0, y: 120 }} 
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +50,7 @@ function Hero() {
               src={heroImg}
               alt="hero"
               className="
-      w-[330px] h-[330px] object-cover 
+      w-[360px] h-[360px] object-cover 
       filter grayscale
       hover:grayscale-0
       hover:animate-fire

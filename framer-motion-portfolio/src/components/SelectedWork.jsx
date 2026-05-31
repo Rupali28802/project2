@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
+import Work1 from "../assets/work1.jpg";
+import Work2 from "../assets/work2.jpg";
+import Work3 from "../assets/work3.jpg";
+import Work4 from "../assets/work4.jpg";
 
 function SelectedWork() {
   const projects = [
@@ -8,28 +12,28 @@ function SelectedWork() {
       desc: "Emotional Engine for Your Personal Growth",
       studio: "Kumpin Studio",
       tag: "Landing Page",
-      img: "/assets/bloomcare.png",
+      img: Work1,
     },
     {
       title: "FragWater - Luxury Fragrance Landing Page",
       desc: "Premium Unisex Fragrance",
       studio: "Kumpin Studio",
       tag: "Landing Page",
-      img: "/assets/fragwater.png",
+      img: Work2,
     },
     {
       title: "BloomCare - Mental Health App Landing Page",
       desc: "Emotional Engine for Your Personal Growth",
       studio: "Kumpin Studio",
       tag: "Landing Page",
-      img: "/assets/bloomcare.png",
+      img: Work3
     },
     {
       title: "FragWater - Luxury Fragrance Landing Page",
       desc: "Premium Unisex Fragrance",
       studio: "Kumpin Studio",
       tag: "Landing Page",
-      img: "/assets/fragwater.png",
+      img: Work4,
     },
   ];
 

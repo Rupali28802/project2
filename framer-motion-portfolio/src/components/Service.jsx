@@ -59,71 +59,8 @@ const services = [
           /SELECTED WORK
         </motion.h2>
       </div>
-      {/* 
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-full mt-10">
-        {services.map((srv, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.8, delay: index * 0.1 }}
-            className="
-        group
-        h-[400px]
-        border
-        border-gray-300
-        px-8
-        py-6
-        hover:bg-black
-        hover:text-white
-        transition-all
-        duration-500
-        cursor-pointer
-        overflow-hidden
-        flex flex-col justify-center
-        
-      "
-          >
-            
-            <h3 className="text-3xl font-semibold mb-2">{srv.title}</h3>
 
-            <p className="text-sm leading-7 opacity-90 mb-6">{srv.desc}</p>
-
-            {srv.img && (
-              <img
-                src={srv.img}
-                alt={srv.title}
-                className="
-            w-[220px] h-[220px] mx-auto
-            object-cover rounded-xl mb-6
-            transition-transform duration-500
-            group-hover:rotate-6 group-hover:scale-105
-          "
-              />
-            )}
-
-            <div className="flex justify-end mt-auto">
-   
-              <FiArrowUpRight
-                className="
-            text-2xl transition-opacity duration-500
-            group-hover:opacity-0 absolute
-          "
-              />
-             
-              <FiX
-                className="
-            text-2xl opacity-0 transition-opacity duration-500
-            group-hover:opacity-100
-          "
-              />
-            </div>
-          </motion.div>
-        ))}
-      </div> */}
-
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-full mt-10">
+      {/* <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-full mt-10">
         {services.map((srv, index) => (
           <motion.div
             key={index}
@@ -138,13 +75,13 @@ const services = [
         flex items-center justify-between
       "
           >
-            {/* Left side content */}
+          
             <div className="flex-1 ">
               <h3 className="text-2xl font-semibold mb-2">{srv.title}</h3>
               <p className="text-sm leading-7 opacity-80">{srv.desc}</p>
             </div>
 
-            {/* Middle image */}
+        
             {srv.img && (
               <img
                 src={srv.img}
@@ -153,13 +90,84 @@ const services = [
             w-[180px] h-[180px] mx-6
             object-cover rounded-xl
             transition-transform duration-500
-            group-hover:rotate-6 group-hover:scale-105
+            group-hover:rotate-10 group-hover:scale-110
           "
               />
             )}
 
-            {/* Right side icon toggle */}
             <div className="relative">
+              <FiArrowUpRight
+                className="
+            text-2xl transition-opacity duration-500
+            group-hover:opacity-0 absolute
+          "
+              />
+              <FiX
+                className="
+            text-2xl opacity-0 transition-opacity duration-500
+            group-hover:opacity-100
+          "
+              />
+            </div>
+          </motion.div>
+        ))}
+      </div> */}
+
+      <div className="grid grid-cols-1 gap-5 w-full mt-10">
+        {services.map((srv, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, delay: index * 0.1 }}
+            className="
+        group relative p-8 rounded-xl shadow transition
+        bg-white text-black hover:bg-black hover:text-white
+        cursor-pointer overflow-hidden
+        flex items-center justify-between
+      "
+          >
+            {/* Left side content */}
+            <div className="w-[35%]">
+              <h3 className="text-2xl font-semibold mb-2">{srv.title}</h3>
+
+              {/* Paragraph hidden by default, visible on hover */}
+              <p
+                c
+                className="
+            text-sm leading-7 
+            opacity-0 group-hover:opacity-100
+            transition-opacity duration-500
+          "
+              >
+                {srv.desc}
+              </p>
+            </div>
+
+            {/* Middle image (hidden by default, visible on hover) */}
+            <div
+              className="
+          opacity-0 group-hover:opacity-100
+          transition-all duration-500
+        "
+            >
+              {srv.img && (
+                <img
+                  src={srv.img}
+                  alt={srv.title}
+                  className="
+              w-[180px] h-[180px] mx-6
+              object-cover rounded-xl
+              transition-transform duration-500
+              group-hover:rotate-6 group-hover:scale-105
+            "
+                />
+              )}
+            </div>
+
+            {/* Right side icon toggle */}
+            <div className="relative w-[20%] flex justify-end">
               <FiArrowUpRight
                 className="
             text-2xl transition-opacity duration-500
