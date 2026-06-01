@@ -67,9 +67,9 @@ function SelectedWork() {
         // animate={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="text-center text-3xl md:text-6xl font-bold relative z-10 mb-12 mt-6"
+        className="text-center text-2xl md:text-6xl font-bold relative z-10 mb-12 mt-6"
       >
         /SELECTED WORK
       </motion.h2>
@@ -95,7 +95,7 @@ function SelectedWork() {
            
             initial={{ opacity: 0, y: -300 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{
               duration: 1,
             //   ease:"easeOut"

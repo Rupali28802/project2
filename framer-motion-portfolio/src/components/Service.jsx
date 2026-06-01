@@ -119,7 +119,7 @@ const services = [
             key={index}
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
             className="
         group relative p-8 rounded-xl shadow transition
@@ -159,8 +159,8 @@ const services = [
                   className="
               w-[180px] h-[180px] mx-6
               object-cover rounded-xl
-              transition-transform duration-500
-              group-hover:rotate-6 group-hover:scale-105
+              transition-transform duration-500 
+              group-hover:rotate-10 group-hover:scale-105
             "
                 />
               )}
