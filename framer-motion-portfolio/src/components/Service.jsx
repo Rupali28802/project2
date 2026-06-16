@@ -52,11 +52,12 @@ const services = [
       md:text-5xl
       font-bold
       -mt-8
+      ml-3
       relative
       z-10
     "
         >
-          /SELECTED WORK
+          /SERVICE
         </motion.h2>
       </div>
 
@@ -113,7 +114,7 @@ const services = [
         ))}
       </div> */}
 
-      <div className="grid grid-cols-1 gap-5 w-full mt-10">
+      <div className="grid grid-cols-1 gap-5 w-full mt-5">
         {services.map((srv, index) => (
           <motion.div
             key={index}
