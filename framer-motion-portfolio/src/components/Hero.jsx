@@ -6,7 +6,7 @@ import heroImg from "../assets/hero.jpeg";
 function Hero() {
   return (
     <section className="flex items-center justify-center min-h-[350px] pt-15">
-      <div className="bg-white p-10 w-full  border">
+      <div className="bg-white p-10 w-full  ">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ function Hero() {
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ duration:2 }}
             className="space-y-5"
           >
             <h2 className="text-2xl font-bold">Full-Stack Developer || MERN</h2>
@@ -43,7 +43,7 @@ function Hero() {
             initial={{ opacity: 0, y: 120 }} 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }} 
-            transition={{ duration: 1 }}
+            transition={{ duration: 1.5 }}
             className="flex justify-center"
           >
             <img
@@ -62,7 +62,7 @@ function Hero() {
           <motion.div
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.7 }}
+            transition={{ duration:2 }}
             className="flex flex-col items-center gap-3"
           >
             <button className="w-40 h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
