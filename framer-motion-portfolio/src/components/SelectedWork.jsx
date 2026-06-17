@@ -44,18 +44,18 @@ function SelectedWork() {
         // animate={{ opacity: 0.15 }}
         whileInView={{ opacity: 0.1 }}
         viewport={{ once: false}}
-        transition={{ duration: 1, 
+        transition={{ duration: 2, 
           
         }}
         className="
     absolute
     left-1/2
-    top-12 md:top-10   // thoda niche shift
+    top-6 md:top-10   
     -translate-x-1/2
-    text-[120px]
+   text-[80px]
     md:text-9xl
     font-extrabold
-    text-gray-400      // thoda dark gray
+    text-gray-400      
     select-none
     pointer-events-none
     whitespace-nowrap
@@ -70,10 +70,10 @@ function SelectedWork() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="text-center text-2xl md:text-6xl font-bold relative z-10 mb-12 mt-6"
+        transition={{ duration: 2 }}
+        className="text-center text-3xl md:text-6xl font-bold relative md:z-10 mb-12 md:mt-6"
       >
-        /SELECTED WORK
+        /PROJECTS
       </motion.h2>
 
       <div className="flex justify-between items-center mb-12 relative z-10">
@@ -84,7 +84,7 @@ function SelectedWork() {
         </div>
 
         <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
-          View All Work
+          View All Projects
           <FiArrowUpRight className="text-white" />
         </button>
       </div>
