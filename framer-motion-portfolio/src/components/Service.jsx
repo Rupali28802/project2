@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { FiArrowUpRight, FiX } from "react-icons/fi";
 import Service1 from "../assets/service1.jpg"
 import Service2 from "../assets/service2.jpg"
@@ -24,7 +24,7 @@ const services = [
 ];
 
   return (
-    <section className="relative w-[90%] m-auto py-24">
+    <section className="relative w-[90%] m-auto py-15">
       <div className="relative">
         <h1
           className="
@@ -43,15 +43,20 @@ const services = [
         </h1>
 
         <motion.h2
+        
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{
+            duration: 1,
+            delay: 0.15,
+            ease: "easeOut",
+          }}
           className="
       text-start
       text-3xl
       md:text-5xl
       font-bold
-      -mt-8
+ 
       ml-3
       relative
       z-10
@@ -61,67 +66,15 @@ const services = [
         </motion.h2>
       </div>
 
-      {/* <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-full mt-10">
-        {services.map((srv, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.8, delay: index * 0.1 }}
-            className="
-        group relative p-8 rounded-xl shadow transition
-        bg-gray-900 text-white hover:bg-black
-        cursor-pointer overflow-hidden
-        flex items-center justify-between
-      "
-          >
-          
-            <div className="flex-1 ">
-              <h3 className="text-2xl font-semibold mb-2">{srv.title}</h3>
-              <p className="text-sm leading-7 opacity-80">{srv.desc}</p>
-            </div>
-
-        
-            {srv.img && (
-              <img
-                src={srv.img}
-                alt={srv.title}
-                className="
-            w-[180px] h-[180px] mx-6
-            object-cover rounded-xl
-            transition-transform duration-500
-            group-hover:rotate-10 group-hover:scale-110
-          "
-              />
-            )}
-
-            <div className="relative">
-              <FiArrowUpRight
-                className="
-            text-2xl transition-opacity duration-500
-            group-hover:opacity-0 absolute
-          "
-              />
-              <FiX
-                className="
-            text-2xl opacity-0 transition-opacity duration-500
-            group-hover:opacity-100
-          "
-              />
-            </div>
-          </motion.div>
-        ))}
-      </div> */}
-
+      
       <div className="grid grid-cols-1 gap-5 w-full mt-5">
         {services.map((srv, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: -200 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: index * 0.1 }}
+            transition={{ duration: 1.5, delay: index * 0.1, ease: "easeout" }}
             className="
         group relative p-8 rounded-xl shadow transition
         bg-white text-black hover:bg-black hover:text-white

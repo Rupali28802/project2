@@ -44,7 +44,9 @@ function SelectedWork() {
         // animate={{ opacity: 0.15 }}
         whileInView={{ opacity: 0.1 }}
         viewport={{ once: false}}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, 
+          
+        }}
         className="
     absolute
     left-1/2
@@ -94,11 +96,12 @@ function SelectedWork() {
             key={index}
            
             initial={{ opacity: 0, y: -200 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0.2 }}
             viewport={{ once: true }}
             transition={{
-              duration: 1,
-            //   ease:"easeOut"
+              duration: 2,
+      
+              ease:"easeOut"
               
             }}
             className="rounded-xl overflow-hidden shadow hover:shadow-lg transition"
