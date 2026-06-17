@@ -85,7 +85,7 @@ function Navbar() {
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
-          className="absolute top-16 right-0 w-2/3 h-screen bg-white shadow-lg p-6 flex flex-col space-y-6 md:hidden"
+          className="absolute text-centertop-16 right-0 w-[150px] h-[380px] bg-white shadow-lg p-6 flex flex-col space-y-6 md:hidden"
         >
           <a href="#home" onClick={() => setMenuOpen(false)}>
             Home
