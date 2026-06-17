@@ -51,24 +51,19 @@
 // export default Navbar;
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi";
+import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi"
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-white shadow-md">
-     
+    <nav className="w-full border-b border-gray-200 top-0 z-50 bg-white ">
       <div className="flex justify-between items-center px-4 py-3 md:hidden">
-      
-        <div
-          
-          className="flex items-center gap-1"
-        >
+        <div className="flex items-center gap-1">
           <span className="font-extrabold text-4xl text-black">R</span>
           <span className="font-extrabold text-4xl text-gray-500">W.</span>
         </div>
-    
+
         <div className="flex items-center gap-4">
           <motion.a
             href="#contact"
@@ -85,7 +80,6 @@ function Navbar() {
         </div>
       </div>
 
-    
       {menuOpen && (
         <motion.div
           initial={{ x: "100%" }}
@@ -117,18 +111,15 @@ function Navbar() {
         </motion.div>
       )}
 
-    
       <div className="hidden md:flex justify-between items-center px-10 py-6">
-       
         <div
-          className="flex items-center bg-green-100 text-green-700 
+          className="flex items-center 
                         shadow-md rounded-full px-5 py-2 font-medium hover:bg-green-200 transition"
         >
           <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
           Available for New Project
         </div>
 
-      
         <ul className="flex space-x-8 font-medium">
           <li>
             <a href="#home">Home</a>
@@ -153,7 +144,6 @@ function Navbar() {
           </li>
         </ul>
 
-       
         <motion.a
           href="#contact"
           className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-3xl shadow-md hover:bg-gray-800 transition"

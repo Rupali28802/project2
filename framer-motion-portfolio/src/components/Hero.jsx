@@ -5,13 +5,13 @@ import heroImg from "../assets/hero.jpeg";
 
 function Hero() {
   return (
-    <section className="flex items-center justify-center min-h-[350px] pt-15">
-      <div className="bg-white p-10 w-full  ">
+    <section className=" flex  items-center justify-center min-h-[350px]  ">
+      <div className="bg-white p-10 w-full m-0  ">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-center  text-[60px] md:text-[95px] lg:text-[95px] font-black leading-none whitespace-nowrap"
+          className="text-center text-[30px] md:text-[95px] lg:text-[95px] font-black leading-none whitespace-nowrap"
         >
           <span className="text-transparent [-webkit-text-stroke:2px_black]">
             RUPALI
@@ -19,14 +19,14 @@ function Hero() {
           <span className="ml-4 text-black">WAKHARE</span>
         </motion.h1>
 
-        <div className="grid grid-cols-[1fr_500px_200px] mt-0 items-center w-full gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_500px_200px] mt-5 items-center w-full gap-5">
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration:2 }}
             className="space-y-5"
           >
-            <h2 className="text-2xl font-bold">Full-Stack Developer || MERN</h2>
+            <h2 className=" text-xl md:text-2xl font-bold">Full-Stack Developer || MERN</h2>
             <p className="text-gray-500 text-justify leading-5 tracking-normal text-[13px] w-[330px]">
               Aspiring Full Stack MERN Developer with hands-on experience in
               React.js, Node.js, Express.js, and MongoDB. Passionate about
@@ -49,8 +49,8 @@ function Hero() {
             <img
               src={heroImg}
               alt="hero"
-              className="
-      w-[360px] h-[360px] object-cover 
+              className=" w-58 h-48
+      md:w-[360px] h-[360px] object-cover 
       filter grayscale
       hover:grayscale-0
       hover:animate-fire
@@ -81,6 +81,7 @@ function Hero() {
         </div>
       </div>
     </section>
+    
   );
 }
 
