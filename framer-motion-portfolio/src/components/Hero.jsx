@@ -23,10 +23,12 @@ function Hero() {
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration:2 }}
+            transition={{ duration: 2 }}
             className="space-y-5"
           >
-            <h2 className=" text-xl md:text-2xl font-bold">Full-Stack Developer || MERN</h2>
+            <h2 className=" text-xl md:text-2xl font-bold">
+              Full-Stack Developer || MERN
+            </h2>
             <p className="text-gray-500 text-justify leading-5 tracking-normal text-[13px] w-[330px]">
               Aspiring Full Stack MERN Developer with hands-on experience in
               React.js, Node.js, Express.js, and MongoDB. Passionate about
@@ -40,9 +42,9 @@ function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 120 }} 
+            initial={{ opacity: 0, y: 120 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }} 
+            viewport={{ once: false }}
             transition={{ duration: 1.5 }}
             className="flex justify-center"
           >
@@ -62,26 +64,25 @@ function Hero() {
           <motion.div
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration:2 }}
-            className="flex flex-col items-center gap-3"
+            transition={{ duration: 2 }}
+            className="flex flex-row md:flex-col items-center gap:5 md:gap-3"
           >
-            <button className="w-40 h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
-              <FaGithub /> GitHub
+            <button className="w-10  h-10 md:w-40 md:h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+              <FaGithub /> <span>GitHub</span>
             </button>
-            <button className="w-40 h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+            <button className="w-10 h-10 md:w-40 md:h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
               <FaLinkedin /> LinkedIn
             </button>
-            <button className="w-40 h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+            <button className="w-10 h-10 md:w-40 md:h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
               <FaInstagram /> Instagram
             </button>
-            <button className="w-40 h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+            <button className="w-10 h-10md:w-40 md:h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
               <FaTwitter /> Twitter
             </button>
           </motion.div>
         </div>
       </div>
     </section>
-    
   );
 }
 
