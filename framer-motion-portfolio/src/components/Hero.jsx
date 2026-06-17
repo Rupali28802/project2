@@ -11,7 +11,7 @@ function Hero() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-center text-[30px] md:text-[95px] lg:text-[95px] font-black leading-none whitespace-nowrap"
+          className="text-center text-[35px] md:text-[95px] lg:text-[95px] font-black leading-none whitespace-nowrap"
         >
           <span className="text-transparent [-webkit-text-stroke:2px_black]">
             RUPALI
@@ -29,7 +29,7 @@ function Hero() {
             <h2 className=" text-xl md:text-2xl font-bold">
               Full-Stack Developer || MERN
             </h2>
-            <p className="text-gray-500 text-justify leading-5 tracking-normal text-[13px] w-[330px]">
+            <p className="text-gray-500 text-justify leading-5 tracking-normal text-[15px] md:text-[13px] md:w-[330px]">
               Aspiring Full Stack MERN Developer with hands-on experience in
               React.js, Node.js, Express.js, and MongoDB. Passionate about
               creating responsive, user-centric applications and continuously
@@ -46,13 +46,13 @@ function Hero() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 1.5 }}
-            className="flex justify-center"
+            className="flex justify-center "
           >
             <img
               src={heroImg}
               alt="hero"
-              className=" w-58 h-48
-      md:w-[360px] h-[360px] object-cover 
+              className=" w-45 h-45 rounded-full
+      md:w-[360px] md:h-[360px] object-cover 
       filter grayscale
       hover:grayscale-0
       hover:animate-fire
@@ -62,22 +62,23 @@ function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 80 }}
+            initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 2 }}
-            className="flex flex-row md:flex-col items-center gap:5 md:gap-3"
+            className="flex flex-row md:flex-col items-center md:gap-3"
           >
-            <button className="w-10  h-10 md:w-40 md:h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
-              <FaGithub /> <span>GitHub</span>
+            <button className="w-15 h-15  md:w-40 md:h-12 ml-5 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+              <FaGithub /> <span className=" hidden md:inline">GitHub</span>
             </button>
-            <button className="w-10 h-10 md:w-40 md:h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
-              <FaLinkedin /> LinkedIn
+            <button className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+              <FaLinkedin /> <span className="hidden md:inline"> LinkedIn</span>
             </button>
-            <button className="w-10 h-10 md:w-40 md:h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
-              <FaInstagram /> Instagram
+            <button className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+              <FaInstagram />
+              <span className="hidden md:inline">Instagram</span>
             </button>
-            <button className="w-10 h-10md:w-40 md:h-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
-              <FaTwitter /> Twitter
+            <button className=" w-15 h-15  md:w-40 md:h-1 ml-12 2 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+              <FaTwitter /> <span className="hidden md:inline">Twitter</span>
             </button>
           </motion.div>
         </div>
