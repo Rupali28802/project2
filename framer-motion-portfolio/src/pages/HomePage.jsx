@@ -1,0 +1,24 @@
+import React from 'react'
+import Hero from '../components/Hero'
+import SelectedWork from '../components/SelectedWork'
+import Service from '../components/Service'
+
+
+const HomePage= () => {
+  return (
+    <div>
+      <section id='home'>
+        <Hero />
+      </section>
+      <section id='projects'>
+        <SelectedWork />
+      </section>
+      <section id='services'>
+        
+        <Service />
+      </section>
+    </div>
+  );
+}
+
+export default HomePage

@@ -77,7 +77,7 @@ function Hero() {
               <FaInstagram />
               <span className="hidden md:inline">Instagram</span>
             </button>
-            <button className=" w-15 h-15  md:w-40 md:h-1 ml-12 2 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+            <button className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition ">
               <FaTwitter /> <span className="hidden md:inline">Twitter</span>
             </button>
           </motion.div>
