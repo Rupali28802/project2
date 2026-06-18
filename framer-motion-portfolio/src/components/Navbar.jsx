@@ -1,54 +1,6 @@
-// import { motion } from "framer-motion";
-// import { useState } from "react";
-// import { FiArrowUpRight, FiMenu,FiX } from "react-icons/fi";
-
-// function Navbar() {
-//   const [menuOpen, setMEnuOpen] = useState(false);
-//   return (
-    
-//     <nav className="flex justify-between items-center px-8 py-4 bg-white shadow-md fixed w-full top-0 z-50">
-//       <div className="flex items-center shadow-md rounded-3xl space-x-2 p-4 ">
-//         <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-//         <span className="text-sm font-medium">Available for New Project</span>
-//       </div>
-
-//       <ul className="flex space-x-9 font-medium">
-//         <li>
-//           <a href="#home" className="text-black hover:text-gray-500 cursor-pointer">Home</a>
-//         </li>
-//         <li>
-//           <a href="#about" className="text-black hover:text-gray-500 cursor-pointer">About</a>
-//         </li>
-//         <li>
-//           <a href="#projects" className="text-black hover:text-gray-500 cursor-pointer">Projects</a>
-//         </li>
-//         <li>
-//           <a href="#services" className="text-black hover:text-gray-500 cursor-pointer">Services</a>
-//         </li>
-//         <li>
-//           <a href="#skills" className="text-black hover:text-gray-500 cursor-pointer">Skills</a>
-//         </li>
-//         <li>
-//           <a href="#resume" className="text-black hover:text-gray-500 cursor-pointer">Resume</a>
-//         </li>
-//         <li>
-//           <a href="Contact" className="text-black hover:text-gray-500 cursor-pointer">Contact</a>
-//         </li>
-//       </ul>
-
-//       <motion.a
-//         href="#contact"
-//         className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-3xl shadow-md hover:bg-gray-800 transition"
-//         whileHover={{ scale: 1.05 }}
-//       >
-//         <span>Let’s Talk</span>
-//         <FiArrowUpRight className="text-white" />
-//       </motion.a>
-//     </nav>
-//   );
-// }
 
 // export default Navbar;
+import { Link, Links } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi"
@@ -87,9 +39,6 @@ function Navbar() {
           exit={{ x: "100%" }}
           className="absolute text-centertop-16 right-0 w-[150px] h-[380px] bg-white shadow-lg p-6 flex flex-col space-y-6 md:hidden"
         >
-          <a href="#home" onClick={() => setMenuOpen(false)}>
-            Home
-          </a>
           <a href="#about" onClick={() => setMenuOpen(false)}>
             About
           </a>
@@ -121,9 +70,9 @@ function Navbar() {
         </div>
 
         <ul className="flex space-x-8 font-medium">
-          <li>
-            <a href="#home">Home</a>
-          </li>
+          <Link onClick={() => setMenuOpen(false)} to="/">
+            Home
+          </Link>
           <li>
             <a href="#about">About</a>
           </li>

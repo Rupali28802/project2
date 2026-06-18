@@ -7,7 +7,7 @@ import Service from '../components/Service'
 const HomePage= () => {
   return (
     <div>
-      <section id='home'>
+      <section id='homepage'>
         <Hero/>
       </section>
       <section id='projects'>

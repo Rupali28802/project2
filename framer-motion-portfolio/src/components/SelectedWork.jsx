@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 import Work1 from "../assets/work1.jpg";
 import Work2 from "../assets/work2.jpg";
 import Work3 from "../assets/work3.jpg";
@@ -7,6 +8,7 @@ import Work4 from "../assets/work4.jpg";
 import { useState } from "react";
 
 function SelectedWork() {
+  const navigate = useNavigate();
   const [filter,setFilter] =  useState("All")
   const projects = [
     {
@@ -127,6 +129,7 @@ function SelectedWork() {
 
         {/* CTA Button (Tablet/Desktop) */}
         <button
+          onClick={() => navigate("/all-projects")}
           className="hidden md:flex items-center gap-2 px-6 py-3 
     bg-black text-white rounded-full hover:bg-gray-800 transition 
     "
@@ -138,6 +141,7 @@ function SelectedWork() {
         {/* Mobile CTA */}
         <div className="flex md:hidden justify-center mt-3">
           <button
+            onClick={() => navigate("/all-projects")}
             className="flex items-center gap-2 px-6 py-2
       bg-black text-white rounded-3xl hover:bg-gray-800 transition 
       text-[10px] mb-4"
