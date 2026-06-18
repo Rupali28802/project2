@@ -13,28 +13,28 @@ function SelectedWork() {
       title: "BloomCare - Mental Health App Landing Page",
       desc: "Emotional Engine for Your Personal Growth",
       studio: "Kumpin Studio",
-      tag: "Landing Page",
+      tag: "Real Project",
       img: Work1,
     },
     {
       title: "FragWater - Luxury Fragrance Landing Page",
       desc: "Premium Unisex Fragrance",
       studio: "Kumpin Studio",
-      tag: "Landing Page",
+      tag: "Exploration",
       img: Work2,
     },
     {
       title: "BloomCare - Mental Health App Landing Page",
       desc: "Emotional Engine for Your Personal Growth",
       studio: "Kumpin Studio",
-      tag: "Landing Page",
+      tag: "Exploration",
       img: Work3
     },
     {
       title: "FragWater - Luxury Fragrance Landing Page",
       desc: "Premium Unisex Fragrance",
       studio: "Kumpin Studio",
-      tag: "Landing Page",
+      tag: "Real Project",
       img: Work4,
     },
   ];
