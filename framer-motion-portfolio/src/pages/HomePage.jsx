@@ -8,7 +8,7 @@ const HomePage= () => {
   return (
     <div>
       <section id='home'>
-        <Hero />
+        <Hero/>
       </section>
       <section id='projects'>
         <SelectedWork />
