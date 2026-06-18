@@ -4,8 +4,10 @@ import Work1 from "../assets/work1.jpg";
 import Work2 from "../assets/work2.jpg";
 import Work3 from "../assets/work3.jpg";
 import Work4 from "../assets/work4.jpg";
+import { useState } from "react";
 
 function SelectedWork() {
+  const [filter,setFilter] =  useState("All")
   const projects = [
     {
       title: "BloomCare - Mental Health App Landing Page",
@@ -36,6 +38,11 @@ function SelectedWork() {
       img: Work4,
     },
   ];
+
+  const filteredProjects = 
+  filter == "All"
+  ? projects
+  : projects.filter((proj) => proj.tag === filter);
 
   return (
     <section className="relative w-[95%] m-auto py-24">
@@ -77,16 +84,23 @@ function SelectedWork() {
       </motion.h2>
 
       <div className="flex justify-between items-center mb-12 relative z-10">
-        <div className="flex gap-6 text-gray-600 font-medium">
-          <button className="hover:text-black">All</button>
-          <button className="hover:text-black">Real Project</button>
-          <button className="hover:text-black">Exploration</button>
+        <div className="flex gap-4 md:gap-6 text-gray-600 font-medium">
+          <button onClick={()=>setFilter("All")} className="` hover:text-black `">All</button>
+          <button onClick={()=>setFilter("Real Project")} className="hover:text-black">Real Project</button>
+          <button onClick={()=>setFilter("Exploration")} className="hover:text-black">Exploration</button>
         </div>
 
-        <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
+        <button className="hidden text-[15px] md:text-base lg:text-lg md:flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
           View All Projects
           <FiArrowUpRight className="text-white" />
         </button>
+        {/* Mobile CTA */}
+        <div className="flex md:hidden justify-center mt-3">
+          <button className="flex items-center gap-2 px-6 py-2 text-white text-sm bg-black rounded-3xl">
+            View All Projects
+            <FiArrowUpRight className="text-white"/>
+          </button>
+        </div>
       </div>
 
       {/* Projects Grid */}
