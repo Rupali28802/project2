@@ -88,6 +88,8 @@ Rules:
 
       const data = await response.json();
       console.log(data);
+      console.log("STATUS:", response.status);
+      console.log("DATA:", data);
       
 
       const reply =
