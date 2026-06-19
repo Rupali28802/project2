@@ -77,7 +77,7 @@ const ChatWidget = ({onClose}) => {
             className={`mb-3 flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
           >
             <div
-              className={`max-w-[80%] rounded-xl px-4 py-2 text-sm ${msg.role === "user" ? "bg-black text-white" : "bg-gray-100 text-black"}`}
+              className={`max-w-[80%] rounded-xl px-4 py-2 text-[10px]  md:text-[15px] tracking-wide ${msg.role === "user" ? "bg-black text-white" : "bg-gray-100 text-black"}`}
             >
               {msg.text}
             </div>
