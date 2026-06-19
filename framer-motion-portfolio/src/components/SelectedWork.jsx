@@ -156,15 +156,26 @@ function SelectedWork() {
       <div className="grid md:grid-cols-2 gap-8 relative z-10">
         {filteredProjects.map((proj, index) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, y: -200 }}
-            whileInView={{ opacity: 1, y: 0.2 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 2,
+            // key={index}
+            // initial={{ opacity: 0, y: -150 }}
+            // whileInView={{ opacity: 1, y: 0.2 }}
+            // viewport={{ once: true }}
+            // transition={{
+            //   duration: 2,
 
-              ease: "easeOut",
+            //   ease: "easeOut",
+
+            key={index}
+            initial={{opacity:0, y:-150, scale:0.95}}
+            whileInView={{opacity:1,y:0,scale:1}}
+            viewport={{once:false,amount:0.2}}
+            transition={{
+              duration:2,
+
+              // delay: rowIndex * 0.3 ,
+              ease:"easeOut"
             }}
+            
             className="rounded-xl overflow-hidden shadow hover:shadow-lg transition"
           >
             <img
