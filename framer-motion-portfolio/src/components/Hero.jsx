@@ -67,19 +67,39 @@ function Hero() {
             transition={{ duration: 2 }}
             className="flex flex-row md:flex-col items-center md:gap-3"
           >
-            <button className="w-15 h-15  md:w-40 md:h-12 ml-5 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+            <a
+              href="https://github.com/Rupali28802"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-15 h-15  md:w-40 md:h-12 ml-5 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition"
+            >
               <FaGithub /> <span className=" hidden md:inline">GitHub</span>
-            </button>
-            <button className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+            </a>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition"
+            >
               <FaLinkedin /> <span className="hidden md:inline"> LinkedIn</span>
-            </button>
-            <button className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rupali-wakhare-b51205287/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition"
+            >
               <FaInstagram />
               <span className="hidden md:inline">Instagram</span>
-            </button>
-            <button className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition ">
+            </a>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition "
+            >
               <FaTwitter /> <span className="hidden md:inline">Twitter</span>
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>
