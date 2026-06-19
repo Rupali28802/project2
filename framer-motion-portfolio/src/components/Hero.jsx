@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight , FiPhone,Fimail } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 import heroImg from "../assets/hero.jpeg";
 
