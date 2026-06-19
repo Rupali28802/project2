@@ -57,15 +57,18 @@ const ChatWidget = ({onClose}) => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex h-[550px] w-[380px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
-      {/* Header */}
+    <div className="fixed bottom-2 right-6 z-50 flex w-[250px] h-[500px] md:h-[530px] md:w-[350px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
       <div className="flex items-center justify-between bg-black px-4 py-3 text-white">
-        <h3 className="font-semibold">Rupali AI Assistant</h3>
+        {/* Header */}
+        <div className="flex ">
+          
+          <FaRobot size={20} className="text-shadow-white" />
+          <h3 className="font-semibold ml-2 mt-0">Rupali AI Assistant</h3>
+        </div>
         <button onClick={onClose} className="text-xl">
           <FiX />
         </button>
       </div>
-
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4">
         {messages.map((msg, i) => (
@@ -81,12 +84,11 @@ const ChatWidget = ({onClose}) => {
           </div>
         ))}
         {loading && (
-          <div className="text-sm text-gray-500">AI is typing...</div>
+          <div className="text-sm text-gray-500">Typing...</div>
         )}
       </div>
-
       {/* Input */}
-      <div className="border-t p-3 flex gap-2">
+      <div className=" p-3 flex gap-2">
         <input
           type="text"
           value={input}
