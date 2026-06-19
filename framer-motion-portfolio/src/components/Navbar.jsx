@@ -1,18 +1,20 @@
 
 // export default Navbar;
-import { Link, Links } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi"
-import ChatBotWidget from "./ChatBotWidget";
+import ChatWidget from "./ChatWidget";
 
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showChat,setShowChat] = useState(false);
   
 
   return (
     <nav className="w-full border-b border-gray-200 top-0 z-50 bg-white ">
+      {/* mobile */}
       <div className="flex justify-between items-center px-4 py-3 md:hidden">
         <div className="flex items-center gap-1">
           <span className="font-extrabold text-4xl text-black">R</span>
@@ -21,14 +23,13 @@ function Navbar() {
 
         <div className="flex items-center gap-4">
           <motion.button
-            onClick={() => setShowChat(!showChat)}
+            onClick={() => setShowChat(true)}
             className="flex items-center space-x-2 bg-black text-white px-3 py-2 rounded-3xl shadow-md hover:bg-gray-800 transition text-sm"
             whileHover={{ scale: 1.05 }}
           >
             <span>Let’s Talk</span>
             <FiArrowUpRight className="text-white" />
           </motion.button>
-         
 
           <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl">
             {menuOpen ? <FiX /> : <FiMenu />}
@@ -98,15 +99,15 @@ function Navbar() {
         </ul>
 
         <motion.button
-         
+          onClick={() => setShowChat(true)}
           className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-3xl shadow-md hover:bg-gray-800 transition"
           whileHover={{ scale: 1.05 }}
         >
           <span>Let’s Talk</span>
           <FiArrowUpRight className="text-white" />
         </motion.button>
-       
       </div>
+      {showChat && <ChatWidget onClose={() => setShowChat(false)} />}
     </nav>
   );
 }
