@@ -9,7 +9,7 @@ import ChatBotWidget from "./ChatBotWidget";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showChat,setShowChat] = useState(false)
+  
 
   return (
     <nav className="w-full border-b border-gray-200 top-0 z-50 bg-white ">
@@ -28,7 +28,7 @@ function Navbar() {
             <span>Let’s Talk</span>
             <FiArrowUpRight className="text-white" />
           </motion.button>
-          <ChatBotWidget showChat={showChat} />
+         
 
           <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl">
             {menuOpen ? <FiX /> : <FiMenu />}
@@ -98,14 +98,14 @@ function Navbar() {
         </ul>
 
         <motion.button
-          onClick={() => setShowChat(!showChat)}
+         
           className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-3xl shadow-md hover:bg-gray-800 transition"
           whileHover={{ scale: 1.05 }}
         >
           <span>Let’s Talk</span>
           <FiArrowUpRight className="text-white" />
         </motion.button>
-        <ChatBotWidget showChat={showChat} />
+       
       </div>
     </nav>
   );
