@@ -11,7 +11,7 @@ const ChatWidget = ({onClose}) => {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      text: "👋 Hi! I'm Rupali AI Assistant. Ask me anything.",
+      text: "Ask me anything . 💬 ",
     },
   ]);
 
@@ -63,7 +63,7 @@ const ChatWidget = ({onClose}) => {
         <div className="flex ">
           
           <FaRobot size={20} className="text-shadow-white" />
-          <h3 className="font-semibold ml-2 mt-0">Rupali AI Assistant</h3>
+          <h3 className="font-semibold ml-2 mt-0">Chatbot</h3>
         </div>
         <button onClick={onClose} className="text-xl">
           <FiX />
@@ -77,7 +77,7 @@ const ChatWidget = ({onClose}) => {
             className={`mb-3 flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
           >
             <div
-              className={`max-w-[80%] rounded-xl px-4 py-2 text-[10px]  md:text-[15px] tracking-wide ${msg.role === "user" ? "bg-black text-white" : "bg-gray-100 text-black"}`}
+              className={`max-w-[80%] rounded-xl px-4 py-2 text-[13px]  md:text-[15px] tracking-wider ${msg.role === "user" ? "bg-black text-white" : "bg-gray-100 text-black"}`}
             >
               {msg.text}
             </div>
@@ -95,12 +95,13 @@ const ChatWidget = ({onClose}) => {
           placeholder="Ask anything..."
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-          className="flex-1 rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-black"
+          className="flex-1 min-w-0 rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-black tracking-wider text-[13px] md:text[15px]"
         />
         <button
           onClick={sendMessage}
           disabled={loading}
-          className="rounded-lg bg-black px-4 text-white"
+          className=" flex-shrink-0
+          rounded-lg bg-black px-4 text-white"
         >
           <FiSend />
         </button>
