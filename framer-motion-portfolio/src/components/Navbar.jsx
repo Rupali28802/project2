@@ -56,9 +56,9 @@ function Navbar() {
           <a href="#skills" onClick={() => setMenuOpen(false)}>
             Skills
           </a>
-          <a href="#resume" onClick={() => setMenuOpen(false)}>
+          {/* <a href="#resume" onClick={() => setMenuOpen(false)}>
             Resume
-          </a>
+          </a> */}
           <a href="#contact" onClick={() => setMenuOpen(false)}>
             Contact
           </a>
@@ -90,9 +90,9 @@ function Navbar() {
           <li>
             <a href="#skills">Skills</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#resume">Resume</a>
-          </li>
+          </li> */}
           <li>
             <a href="#contact">Contact</a>
           </li>

@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import SelectedWork from '../components/SelectedWork'
 import Service from '../components/Service'
 import Skills from '../components/Skills'
+import Contact from '../components/Contact'
 
 
 const HomePage= () => {
@@ -20,7 +21,9 @@ const HomePage= () => {
       <section id="services">
         <Service />
       </section>
-      <section id="contact"></section>
+      <section id="contact">
+        <Contact/>
+      </section>
     </div>
   );
 }
