@@ -8,20 +8,19 @@ import Skills from '../components/Skills'
 const HomePage= () => {
   return (
     <div>
-      <section id='about'>
-       <Hero/>
+      <section id="about">
+        <Hero />
       </section>
-      <section id='skills'>
-        <Skills/>
-
+      <section id="skills">
+        <Skills />
       </section>
-      <section id='projects'>
+      <section id="projects">
         <SelectedWork />
       </section>
-      <section id='services'>
-        
+      <section id="services">
         <Service />
       </section>
+      <section id="contact"></section>
     </div>
   );
 }

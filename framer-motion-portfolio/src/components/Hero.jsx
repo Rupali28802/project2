@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import { FiArrowUpRight } from "react-icons/fi";
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FiArrowUpRight, FiMail, FiPhone, FiDownload } from "react-icons/fi";
+import { FaGithub, FaLinkedin, 
+  // FaInstagram, FaTwitter 
+} from "react-icons/fa";
 import heroImg from "../assets/hero.jpeg";
 
 function Hero() {
   return (
-    <section className=" flex  items-center justify-center min-h-[350px]  " >
+    <section className=" flex  items-center justify-center min-h-[350px]  ">
       <div className="bg-white p-10 w-full m-0  ">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -35,10 +37,39 @@ function Hero() {
               creating responsive, user-centric applications and continuously
               learning modern web technologies.
             </p>
-            <button className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full">
+           
+            {/* <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
+            >
               Let’s Collaborate
               <FiArrowUpRight />
-            </button>
+            </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="border px-6 py-3 rounded-full"
+            >
+              Download Resume
+            </a> */}
+            <div className=" flex  gap-3 text-[8px] md:text-[13px] mt-5">
+              <a
+                href="#contact"
+                className="inline-flex  items-center gap-1 bg-black text-white px-6 py-3 rounded-full  hover:bg-white hover:text-black border  transition"
+              >
+                Let’s Collaborate
+                <FiArrowUpRight />
+              </a>
+
+              <a
+                href="/RupaliWakhare_Resume.pdf"
+                download
+                className="inline-flex items-center gap-2 border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
+              >
+                Download Resume
+                <FiDownload/>
+              </a>
+            </div>
           </motion.div>
 
           <motion.div
@@ -84,21 +115,23 @@ function Hero() {
               <FaLinkedin /> <span className="hidden md:inline"> LinkedIn</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/rupali-wakhare-b51205287/"
+              href="mailto:rupaliwakhre26@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition"
             >
-              <FaInstagram />
-              <span className="hidden md:inline">Instagram</span>
+              <FiMail />
+              <span className="hidden md:inline">Email</span>
             </a>
             <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+919356235644"
+              aria-label="Mobile"
+              title="Call Me"
+              // target="_blank"
+              // rel="noopener noreferrer"
               className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition "
             >
-              <FaTwitter /> <span className="hidden md:inline">Twitter</span>
+              <FiPhone /> <span className="hidden md:inline">Call</span>
             </a>
           </motion.div>
         </div>
