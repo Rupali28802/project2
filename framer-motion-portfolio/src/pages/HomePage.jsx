@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import SelectedWork from '../components/SelectedWork'
 import Service from '../components/Service'
+import Skills from '../components/Skills'
 
 
 const HomePage= () => {
@@ -9,6 +10,10 @@ const HomePage= () => {
     <div>
       <section id='homepage'>
         <Hero/>
+      </section>
+      <section id='skills'>
+        <Skills/>
+
       </section>
       <section id='projects'>
         <SelectedWork />

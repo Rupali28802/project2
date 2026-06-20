@@ -24,10 +24,11 @@ const services = [
 ];
 
   return (
-    <section className="relative w-[90%] m-auto py-15">
+    <section className="relative w-[90%] m-auto ">
       <div className="relative">
         <h1
           className="
+          
       text-left
       text-[70px]
       md:text-[80px]
@@ -43,7 +44,6 @@ const services = [
         </h1>
 
         <motion.h2
-        
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -52,13 +52,18 @@ const services = [
             ease: "easeOut",
           }}
           className="
+          relative
+          left-0
+       
+          -translalte-y-1/3
       text-start
       text-3xl
       md:text-5xl
       font-bold
+
  
       ml-3
-      relative
+      
       z-10
     "
         >
@@ -66,7 +71,6 @@ const services = [
         </motion.h2>
       </div>
 
-      
       <div className="grid grid-cols-1 gap-5 w-full mt-5">
         {services.map((srv, index) => (
           <motion.div
