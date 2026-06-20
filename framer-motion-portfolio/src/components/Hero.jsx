@@ -5,7 +5,7 @@ import heroImg from "../assets/hero.jpeg";
 
 function Hero() {
   return (
-    <section className=" flex  items-center justify-center min-h-[350px]  ">
+    <section className=" flex  items-center justify-center min-h-[350px]  " >
       <div className="bg-white p-10 w-full m-0  ">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 function Skills() {
@@ -20,27 +21,36 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-20 px-4 overflow-hidden ">
+      <div className="max-w-6xl ">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, x: 280 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 2,
+            delay: 0.15,
+            ease: "easeOut",
+          }}
+          className="ml-4 mb-12"
+        >
           <span className="text-sm uppercase tracking-widest text-gray-500">
             My Expertise
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-2">
+          <h2 className=" text-4xl md:text-5xl font-bold mt-2">
             Skills & Technologies
           </h2>
 
-          <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-4 w-[380px] ">
             Technologies and tools I use to build modern, scalable, and
             user-friendly web applications.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Marquee */}
-        <div className="relative overflow-hidden">
-          <div className="flex gap-4 w-max animate-marquee">
+        
+        <div className="relative overflow-hidden ">
+          <div className="flex gap-4 w-max mx-aut animate-marquee">
             {[...skills, ...skills].map((skill, index) => (
               <div
                 key={index}

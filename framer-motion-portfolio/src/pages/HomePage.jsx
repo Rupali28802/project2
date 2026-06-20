@@ -8,8 +8,8 @@ import Skills from '../components/Skills'
 const HomePage= () => {
   return (
     <div>
-      <section id='homepage'>
-        <Hero/>
+      <section id='hero'>
+       <Hero/>
       </section>
       <section id='skills'>
         <Skills/>
