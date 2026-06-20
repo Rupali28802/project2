@@ -8,7 +8,7 @@ import Skills from '../components/Skills'
 const HomePage= () => {
   return (
     <div>
-      <section id='hero'>
+      <section id='about'>
        <Hero/>
       </section>
       <section id='skills'>

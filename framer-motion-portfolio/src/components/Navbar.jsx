@@ -44,7 +44,7 @@ function Navbar() {
           exit={{ x: "100%" }}
           className="absolute text-centertop-16 right-0 w-[150px] h-[380px] bg-white shadow-lg p-6 flex flex-col space-y-6 md:hidden"
         >
-          <a href="#hero" onClick={() => setMenuOpen(false)}>
+          <a href="#about" onClick={() => setMenuOpen(false)}>
             About
           </a>
           <a href="#projects" onClick={() => setMenuOpen(false)}>
