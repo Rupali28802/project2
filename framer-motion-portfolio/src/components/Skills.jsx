@@ -24,15 +24,16 @@ function Skills() {
     <section id="skills" className="py-20 px-4 overflow-hidden ">
       <div className="max-w-6xl ">
         {/* Heading */}
+      
         <motion.div
-          initial={{ opacity: 0, x: 280 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 480 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
-            duration: 2,
+            duration: 1,
             delay: 0.15,
             ease: "easeInOut",
           }}
-          viewport={{once:false}}
+          viewport={{ once: false, amount: 0.3 }}
           className="ml-4 mb-12"
         >
           <span className="text-sm uppercase tracking-widest text-gray-500">
