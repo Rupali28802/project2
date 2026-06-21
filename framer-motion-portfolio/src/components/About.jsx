@@ -17,7 +17,7 @@ function About() {
         <motion.h2
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false}}
+          viewport={{ once: false }}
           transition={{ duration: 1.5 }}
           className="text-4xl md:text-6xl font-bold mt-3"
         >
@@ -29,22 +29,32 @@ function About() {
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false}}
-            transition={{ duration: 2}}
-
+            viewport={{ once: false }}
+            transition={{ duration: 2 }}
           >
-            <p className="text-gray-600 leading-8 text-justify tracking-wider ">
-              I'm Rupali Wakhare, a Full Stack MERN Developer passionate about
-              building modern, scalable, and user-friendly web applications. I
-              have hands-on experience with React.js, Node.js, Express.js,
-              MongoDB, and Tailwind CSS.
+            <p className="text-gray-600 leading-8 text-justify tracking-wider">
+              I'm a <strong>Full Stack MERN Developer</strong> focused on
+              building
+              <strong> scalable</strong>, <strong>responsive</strong>, and
+              <strong> user-centric web applications</strong>.
+              <br />
+              <br />I have hands-on experience developing full-stack projects
+              using
+              <strong> React.js</strong>, <strong>Node.js</strong>,
+              <strong> Express.js</strong>, and <strong>MongoDB</strong>. My
+              expertise includes <strong>REST APIs</strong>,
+              <strong> Authentication Systems</strong>,
+              <strong> Database Management</strong>, and
+              <strong> Modern UI Development</strong>.
+              <br />
+              <br />I enjoy solving <strong>real-world problems</strong> through
+              <strong> clean, maintainable code</strong> and continuously
+              improving my skills by building{" "}
+              <strong>practical projects</strong> and exploring
+              <strong> new technologies</strong>.
             </p>
 
-            <p className="text-gray-600 leading-8 mt-5">
-              I enjoy transforming ideas into real-world digital products,
-              focusing on clean code, responsive design, and great user
-              experiences.
-            </p>
+           
           </motion.div>
 
           {/* Right Side */}
@@ -52,7 +62,7 @@ function About() {
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 2}}
+            transition={{ duration: 2 }}
             className="grid grid-cols-2 gap-4"
           >
             <div className="border rounded-2xl p-6 shadow-sm">
