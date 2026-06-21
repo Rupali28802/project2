@@ -18,6 +18,16 @@ function Skills() {
     "Postman",
     "Responsive Design",
     "MERN Stack",
+    "VS Code",
+    "ThanderClient",
+    "BootStrap",
+    "GenAi",
+    "Gemini",
+    "Vercel",
+    "Netlify",
+    "Clerk",
+    "Framer-motion",
+    "Material-UI"
   ];
 
   return (

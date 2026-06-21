@@ -24,7 +24,7 @@ function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-6xl font-bold mt-3"
+          className="text-3xl md:text-6xl font-bold mt-3"
         >
           Let's Work Together
         </motion.h2>
