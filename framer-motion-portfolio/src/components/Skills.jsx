@@ -30,8 +30,9 @@ function Skills() {
           transition={{
             duration: 2,
             delay: 0.15,
-            ease: "easeOut",
+            ease: "easeInOut",
           }}
+          viewport={{once:false}}
           className="ml-4 mb-12"
         >
           <span className="text-sm uppercase tracking-widest text-gray-500">
@@ -48,7 +49,6 @@ function Skills() {
           </p>
         </motion.div>
 
-        
         <div className="relative overflow-hidden ">
           <div className="flex gap-4 w-max mx-aut animate-marquee">
             {[...skills, ...skills].map((skill, index) => (

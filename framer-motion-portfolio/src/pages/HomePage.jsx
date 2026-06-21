@@ -4,14 +4,19 @@ import SelectedWork from '../components/SelectedWork'
 import Service from '../components/Service'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
+import About from "../components/About"
 
 
 const HomePage= () => {
   return (
     <div>
-      <section id="about">
+      <section id="Home">
         <Hero />
       </section>
+      <section>
+        <About/>
+      </section>
+
       <section id="skills">
         <Skills />
       </section>
