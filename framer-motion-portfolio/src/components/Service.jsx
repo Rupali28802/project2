@@ -1,25 +1,25 @@
 import { easeInOut, motion } from "framer-motion";
 import { FiArrowUpRight, FiX } from "react-icons/fi";
-// import Service1 from "../assets/service1.jpg";
-// import Service2 from "../assets/service2.jpg";
-// import Service3 from "../assets/service3.jpg";
+import Service1 from "../assets/service1.png";
+import Service2 from "../assets/service2.png";
+import Service3 from "../assets/service3.png";
 
 function Service() {
   const services = [
     {
       title: "Full Stack Development",
-      desc: "Building scalable MERN stack applications with modern UI and secure backend architecture.",
-      // img: Service1,
+      desc: "I build scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). From designing responsive user interfaces to implementing secure backend APIs and managing databases, I handle the complete development cycle to deliver modern, production‑ready solutions.",
+      img:Service1,
     },
     {
       title: "Frontend Development",
-      desc: "Creating responsive React applications with Tailwind CSS and Framer Motion.",
-      // img: Service2,
+      desc: "I specialize in creating responsive, interactive, and visually appealing user interfaces using React.js, TailwindCSS, and Framer Motion. My focus is on performance, accessibility, and delivering seamless user experiences across devices.",
+      img: Service2,
     },
     {
       title: "Backend Development",
-      desc: "Developing REST APIs, authentication systems, and database architecture using Node.js and MongoDB.",
-      // img: Service3,
+      desc: "I develop robust server‑side applications with Node.js and Express.js, implementing RESTful APIs, authentication systems (JWT, Clerk), and database architectures using MongoDB. My backend solutions ensure scalability, security, and smooth integration with frontend applications.",
+      img: Service3,
     },
   ];
 
@@ -83,18 +83,18 @@ function Service() {
         group relative p-8 rounded-xl shadow transition
         bg-white text-black hover:bg-black hover:text-white
         cursor-pointer overflow-hidden
-        flex flex-col md:flex-row md:items-center md:justify-between gap-6
+        flex flex-col lg:flex-row md:items-center lg:justify-between gap-6
       "
           >
             {/* Left side content */}
-            <div className="w-full md:w-[35%] pr-10 md:pr-0">
+            <div className="w-full lg:w-[35%] pr-10 lg:pr-0">
               <h3 className="text-2xl font-semibold mb-2">{srv.title}</h3>
 
               {/* Paragraph visible on mobile, hidden by default on desktop, visible on hover */}
               <p
                 className="
-            text-sm leading-7 opacity-100
-            md:opacity-0 md:group-hover:opacity-100
+            text-sm leading-7 opacity-100 text-justify
+            lg:opacity-0 lg:group-hover:opacity-100
             transition-opacity duration-500
           "
               >
@@ -105,9 +105,9 @@ function Service() {
             {/* Middle image (visible on mobile below text, hidden by default on desktop, visible on hover) */}
             <div
               className="
-              self-center md:self-auto
+              self-center lg:self-auto
               opacity-100 
-          md:opacity-0 md:group-hover:opacity-100
+          lg:opacity-0 lg:group-hover:opacity-100
           transition-all duration-500
         "
             >
@@ -116,10 +116,10 @@ function Service() {
                   src={srv.img}
                   alt={srv.title}
                   className="
-              w-[180px] h-[180px] md:mx-6
+              w-[180px] h-[180px] lg:mx-6
               object-cover rounded-xl
               transition-transform duration-500 
-              md:group-hover:rotate-12 md:group-hover:scale-105
+              lg:group-hover:rotate-12 lg:group-hover:scale-105
             "
                 />
               )}

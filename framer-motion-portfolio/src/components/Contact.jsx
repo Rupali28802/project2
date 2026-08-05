@@ -7,15 +7,14 @@ function Contact() {
       id="contact"
       className="py-20 px-4 min-h-screen bg-white flex items-center justify-center"
     >
-     
       <div className="max-w-4xl mx-auto text-center">
-         <div
-        className="flex items-center 
+        <div
+          className="flex items-center 
                        mb-4 shadow-md rounded-full px-5 py-2 font-medium hover:bg-green-200 transition"
-      >
-        <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-        Available for New Project
-      </div>
+        >
+          <span className="w-3 lg:w-5 h-3 lg:h-5 bg-green-500 l  lg:ml-15 rounded-full mr-2"></span>
+          Available for New Project
+        </div>
         <motion.span
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

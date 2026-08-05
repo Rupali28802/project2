@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import Project1 from "../assets/project1.png";
+import Project2 from "../assets/project2.png";
 // import Work2 from "../assets/work2.jpg";
 // import Work3 from "../assets/work3.jpg";
 // import Work4 from "../assets/work4.jpg";
@@ -17,17 +18,18 @@ function SelectedWork() {
       // studio: "Kumpin Studio",
       // tag: "Real Project",
       img: Project1,
-      link:""
+      link: "https://github.com/Rupali28802/project2/tree/main/framer-motion-portfolio",
     },
-    
+
     {
       title: "E-Commerce Website",
       desc: "A full‑stack rental e‑commerce platform built with MERN stack. Features include product catalog, cart, wishlist, checkout with Razorpay integration, and admin dashboard for managing users, orders, and payments.",
       // studio: "Kumpin Studio",
       // tag: "Exploration",
       // img: Work3,
+      img:Project2,
+      link: "https://github.com/Rupali28802/rentease-furniture-rental",
     },
-   
   ];
 
   const filteredProjects =
@@ -167,7 +169,7 @@ function SelectedWork() {
             <img
               src={proj.img}
               alt={proj.title}
-              className=" w-[80%] m-auto md:w-full md:h-[220px] object-cover"
+              className=" w-[80%] m-auto md:w-full md:h-[270px] object-fit"
             />
             <div className="p-6">
               <span className="text-xs uppercase text-gray-400">
@@ -176,6 +178,19 @@ function SelectedWork() {
               <h3 className="text-xl font-semibold mt-2">{proj.title}</h3>
               <p className="text-gray-500 mb-2">{proj.desc}</p>
               <span className="text-sm text-gray-400">{proj.studio}</span>
+              {proj.link && (
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-4 px-4 py-2 
+        bg-black text-white text-sm rounded-full 
+        hover:bg-gray-800 transition"
+                >
+                  GitHub Repo
+                  <FiArrowUpRight className="text-white" />
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
