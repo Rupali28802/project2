@@ -1,27 +1,27 @@
 import { easeInOut, motion } from "framer-motion";
 import { FiArrowUpRight, FiX } from "react-icons/fi";
-import Service1 from "../assets/service1.jpg"
-import Service2 from "../assets/service2.jpg"
-import Service3 from "../assets/service3.jpg"
+// import Service1 from "../assets/service1.jpg";
+// import Service2 from "../assets/service2.jpg";
+// import Service3 from "../assets/service3.jpg";
 
 function Service() {
-const services = [
-  {
-    title: "Full Stack Development",
-    desc: "Building scalable MERN stack applications with modern UI and secure backend architecture.",
-    img: Service1,
-  },
-  {
-    title: "Frontend Development",
-    desc: "Creating responsive React applications with Tailwind CSS and Framer Motion.",
-    img: Service2,
-  },
-  {
-    title: "Backend Development",
-    desc: "Developing REST APIs, authentication systems, and database architecture using Node.js and MongoDB.",
-    img: Service3,
-  },
-];
+  const services = [
+    {
+      title: "Full Stack Development",
+      desc: "Building scalable MERN stack applications with modern UI and secure backend architecture.",
+      // img: Service1,
+    },
+    {
+      title: "Frontend Development",
+      desc: "Creating responsive React applications with Tailwind CSS and Framer Motion.",
+      // img: Service2,
+    },
+    {
+      title: "Backend Development",
+      desc: "Developing REST APIs, authentication systems, and database architecture using Node.js and MongoDB.",
+      // img: Service3,
+    },
+  ];
 
   return (
     <section className="relative w-[90%] m-auto ">
@@ -55,7 +55,7 @@ const services = [
           relative
           left-0
        
-          -translalte-y-1/3
+          -translate-y-1/3
       text-start
       text-3xl
       md:text-5xl
@@ -78,24 +78,23 @@ const services = [
             initial={{ opacity: 0, x: -200 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.5, delay: index * 0.1, ease: "easeout" }}
+            transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
             className="
         group relative p-8 rounded-xl shadow transition
         bg-white text-black hover:bg-black hover:text-white
         cursor-pointer overflow-hidden
-        flex items-center justify-between
+        flex flex-col md:flex-row md:items-center md:justify-between gap-6
       "
           >
             {/* Left side content */}
-            <div className="w-[35%]">
+            <div className="w-full md:w-[35%] pr-10 md:pr-0">
               <h3 className="text-2xl font-semibold mb-2">{srv.title}</h3>
 
-              {/* Paragraph hidden by default, visible on hover */}
+              {/* Paragraph visible on mobile, hidden by default on desktop, visible on hover */}
               <p
-                c
                 className="
-            text-sm leading-7 
-            opacity-0 group-hover:opacity-100
+            text-sm leading-7 opacity-100
+            md:opacity-0 md:group-hover:opacity-100
             transition-opacity duration-500
           "
               >
@@ -103,10 +102,12 @@ const services = [
               </p>
             </div>
 
-            {/* Middle image (hidden by default, visible on hover) */}
+            {/* Middle image (visible on mobile below text, hidden by default on desktop, visible on hover) */}
             <div
               className="
-          opacity-0 group-hover:opacity-100
+              self-center md:self-auto
+              opacity-100 
+          md:opacity-0 md:group-hover:opacity-100
           transition-all duration-500
         "
             >
@@ -115,17 +116,17 @@ const services = [
                   src={srv.img}
                   alt={srv.title}
                   className="
-              w-[180px] h-[180px] mx-6
+              w-[180px] h-[180px] md:mx-6
               object-cover rounded-xl
               transition-transform duration-500 
-              group-hover:rotate-10 group-hover:scale-105
+              md:group-hover:rotate-12 md:group-hover:scale-105
             "
                 />
               )}
             </div>
 
             {/* Right side icon toggle */}
-            <div className="relative w-[20%] flex justify-end">
+            <div className="absolute top-8 right-8 flex justify-end">
               <FiArrowUpRight
                 className="
             text-2xl transition-opacity duration-500
@@ -147,5 +148,3 @@ const services = [
 }
 
 export default Service;
-
-

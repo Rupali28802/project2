@@ -17,8 +17,10 @@ function Navbar() {
       {/* mobile */}
       <div className="flex justify-between items-center px-4 py-3 md:hidden">
         <div className="flex items-center gap-1">
-          <span className="font-extrabold text-4xl text-black">R</span>
-          <span className="font-extrabold text-4xl text-gray-500">W.</span>
+          <Link to="/" className="flex items-center gap-1">
+            <span className="font-extrabold text-4xl text-black">R</span>
+            <span className="font-extrabold text-4xl text-gray-500">W.</span>
+          </Link>
         </div>
 
         <div className="flex items-center gap-4">

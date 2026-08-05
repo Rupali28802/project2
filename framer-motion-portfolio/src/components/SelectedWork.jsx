@@ -1,50 +1,37 @@
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import Work1 from "../assets/work1.jpg";
-import Work2 from "../assets/work2.jpg";
-import Work3 from "../assets/work3.jpg";
-import Work4 from "../assets/work4.jpg";
+import Project1 from "../assets/project1.png";
+// import Work2 from "../assets/work2.jpg";
+// import Work3 from "../assets/work3.jpg";
+// import Work4 from "../assets/work4.jpg";
 import { useState } from "react";
 
 function SelectedWork() {
   const navigate = useNavigate();
-  const [filter,setFilter] =  useState("All")
+  const [filter, setFilter] = useState("All");
   const projects = [
     {
-      title: "BloomCare - Mental Health App Landing Page",
-      desc: "Emotional Engine for Your Personal Growth",
-      studio: "Kumpin Studio",
-      tag: "Real Project",
-      img: Work1,
+      title: "Portfolio Website",
+      desc: "A responsive personal portfolio showcasing skills, services, and projects. Designed with React, TailwindCSS, and Framer Motion for smooth animations and modern UI.",
+      // studio: "Kumpin Studio",
+      // tag: "Real Project",
+      img: Project1,
+      link:""
     },
+    
     {
-      title: "FragWater - Luxury Fragrance Landing Page",
-      desc: "Premium Unisex Fragrance",
-      studio: "Kumpin Studio",
-      tag: "Exploration",
-      img: Work2,
+      title: "E-Commerce Website",
+      desc: "A full‑stack rental e‑commerce platform built with MERN stack. Features include product catalog, cart, wishlist, checkout with Razorpay integration, and admin dashboard for managing users, orders, and payments.",
+      // studio: "Kumpin Studio",
+      // tag: "Exploration",
+      // img: Work3,
     },
-    {
-      title: "BloomCare - Mental Health App Landing Page",
-      desc: "Emotional Engine for Your Personal Growth",
-      studio: "Kumpin Studio",
-      tag: "Exploration",
-      img: Work3
-    },
-    {
-      title: "FragWater - Luxury Fragrance Landing Page",
-      desc: "Premium Unisex Fragrance",
-      studio: "Kumpin Studio",
-      tag: "Real Project",
-      img: Work4,
-    },
+   
   ];
 
-  const filteredProjects = 
-  filter == "All"
-  ? projects
-  : projects.filter((proj) => proj.tag === filter);
+  const filteredProjects =
+    filter == "All" ? projects : projects.filter((proj) => proj.tag === filter);
 
   return (
     <section className="relative w-[95%] m-auto py-24">
@@ -106,7 +93,7 @@ function SelectedWork() {
       </div> */}
       <div className="flex justify-between items-center mb-12 relative z-10">
         {/* Filter Buttons */}
-        <div className="flex gap-4 md:gap-6 text-gray-600 font-medium">
+        <div className="hidden flex gap-4 md:gap-6 text-gray-600 font-medium">
           <button
             onClick={() => setFilter("All")}
             className={`hover:text-black text-sm md:text-base lg:text-lg ${filter === "All" ? "text-black underline" : ""}`}
@@ -121,14 +108,14 @@ function SelectedWork() {
           </button>
           <button
             onClick={() => setFilter("Exploration")}
-            className={`hover:text-black text-sm md:text-base lg:text-lg ${filter === "Exploration" ? "text-black underline" : ""}`}
+            className={`hover:text-black sm:hidden text-sm md:text-base lg:text-lg ${filter === "Exploration" ? "text-black underline" : ""}`}
           >
             Exploration
           </button>
         </div>
 
         {/* CTA Button (Tablet/Desktop) */}
-        <button
+        {/* <button
           onClick={() => navigate("/all-projects")}
           className="hidden md:flex items-center gap-2 px-6 py-3 
     bg-black text-white rounded-full hover:bg-gray-800 transition 
@@ -136,10 +123,10 @@ function SelectedWork() {
         >
           View All Projects
           <FiArrowUpRight className="text-white" />
-        </button>
+        </button> */}
 
         {/* Mobile CTA */}
-        <div className="flex md:hidden justify-center mt-3">
+        {/* <div className="flex hidden md:hidden justify-center mt-3">
           <button
             onClick={() => navigate("/all-projects")}
             className="flex items-center gap-2 px-6 py-2
@@ -149,7 +136,7 @@ function SelectedWork() {
             View All Projects
             <FiArrowUpRight className="text-white" />
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Projects Grid */}
@@ -166,22 +153,21 @@ function SelectedWork() {
             //   ease: "easeOut",
 
             key={index}
-            initial={{opacity:0, y:-150, scale:0.95}}
-            whileInView={{opacity:1,y:0,scale:1}}
-            viewport={{once:false,amount:0.2}}
+            initial={{ opacity: 0, y: -100, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{
-              duration:2,
+              duration: 2,
 
               // delay: rowIndex * 0.3 ,
-              ease:"easeOut"
+              ease: "easeOut",
             }}
-            
             className="rounded-xl overflow-hidden shadow hover:shadow-lg transition"
           >
             <img
               src={proj.img}
               alt={proj.title}
-              className="w-full h-[220px] object-cover"
+              className=" w-[80%] m-auto md:w-full md:h-[220px] object-cover"
             />
             <div className="p-6">
               <span className="text-xs uppercase text-gray-400">

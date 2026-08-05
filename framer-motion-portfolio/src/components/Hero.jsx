@@ -37,7 +37,7 @@ function Hero() {
               creating responsive, user-centric applications and continuously
               learning modern web technologies.
             </p>
-           
+
             {/* <a
               href="#contact"
               className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
@@ -67,7 +67,7 @@ function Hero() {
                 className="inline-flex items-center gap-2 border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
               >
                 Download Resume
-                <FiDownload/>
+                <FiDownload />
               </a>
             </div>
           </motion.div>
@@ -84,9 +84,9 @@ function Hero() {
               alt="hero"
               className=" w-45 h-45 rounded-full
       md:w-[360px] md:h-[360px] object-cover 
-      filter grayscale
-      hover:grayscale-0
-      hover:animate-fire
+      md: grayscale
+      md:hover:grayscale-0
+      md:hover:animate-fire
       transition duration-700 ease-in-out
     "
             />
@@ -107,7 +107,7 @@ function Hero() {
               <FaGithub /> <span className=" hidden md:inline">GitHub</span>
             </a>
             <a
-              href=""
+              href="https://www.linkedin.com/in/rupali-wakhare-b51205287/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition"

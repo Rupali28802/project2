@@ -19,7 +19,7 @@ function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 1.5 }}
-          className="text-4xl md:text-6xl font-bold mt-3"
+          className="text-3xl md:text-6xl font-bold mt-3"
         >
           Passionate MERN Stack Developer
         </motion.h2>
@@ -32,7 +32,7 @@ function About() {
             viewport={{ once: false }}
             transition={{ duration: 2 }}
           >
-            <p className="text-gray-600 leading-8 text-justify tracking-wider">
+            <p className="text-gray-600 md:leading-8 text-justify tracking-normal md:tracking-wider">
               I'm a <strong>Full Stack MERN Developer</strong> focused on
               building
               <strong> scalable</strong>, <strong>responsive</strong>, and

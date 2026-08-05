@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import SelectedWork from "./components/SelectedWork";
 import Service from "./components/Service";
 import HomePage from "./pages/HomePage";
-import AllProjects from "./pages/AllProjects";
+// import AllProjects from "./pages/AllProjects";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />}/>
-          <Route path="/all-projects" element={<AllProjects/>}/>
+          {/* <Route path="/all-projects" element={<AllProjects/>}/> */}
         </Routes>
       </Router>
     </div>

@@ -27,16 +27,16 @@ function Skills() {
     "Netlify",
     "Clerk",
     "Framer-motion",
-    "Material-UI"
+    "Material-UI",
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 overflow-hidden ">
+    <section id="skills" className="py-1 md:py-20 px-4 overflow-hidden ">
       <div className="max-w-6xl ">
         {/* Heading */}
-      
+
         <motion.div
-          initial={{ opacity: 0, x: 480 }}
+          initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 1,
@@ -54,7 +54,7 @@ function Skills() {
             Skills & Technologies
           </h2>
 
-          <p className="text-gray-500 mt-4 w-[380px] ">
+          <p className="text-gray-500 mt-4 w-full md:w-[380px] ">
             Technologies and tools I use to build modern, scalable, and
             user-friendly web applications.
           </p>
@@ -64,7 +64,7 @@ function Skills() {
           <div className="flex gap-4 w-max mx-aut animate-marquee">
             {[...skills, ...skills].map((skill, index) => (
               <div
-                key={index}
+                key={`marquee-${index}`}
                 className="
                   px-6 py-3
                   rounded-full
