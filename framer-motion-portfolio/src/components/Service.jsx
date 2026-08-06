@@ -9,17 +9,17 @@ function Service() {
     {
       title: "Full Stack Development",
       desc: "I build scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). From designing responsive user interfaces to implementing secure backend APIs and managing databases, I handle the complete development cycle to deliver modern, production‑ready solutions.",
-      img:Service1,
+      img:Service3,
     },
     {
       title: "Frontend Development",
       desc: "I specialize in creating responsive, interactive, and visually appealing user interfaces using React.js, TailwindCSS, and Framer Motion. My focus is on performance, accessibility, and delivering seamless user experiences across devices.",
-      img: Service2,
+      img: Service1,
     },
     {
       title: "Backend Development",
       desc: "I develop robust server‑side applications with Node.js and Express.js, implementing RESTful APIs, authentication systems (JWT, Clerk), and database architectures using MongoDB. My backend solutions ensure scalability, security, and smooth integration with frontend applications.",
-      img: Service3,
+      img: Service2,
     },
   ];
 
