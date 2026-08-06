@@ -62,7 +62,7 @@ function Hero() {
               </a>
 
               <a
-                href="/RupaliWakhare_Resume.pdf"
+                href="/RupaliWakhare_CV.pdf"
                 download
                 className="inline-flex items-center gap-2 border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
               >
