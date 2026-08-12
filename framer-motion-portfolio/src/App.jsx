@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+    <div className="min-h-screen text-gray-900">
       <Router>
         <Navbar />
         <Routes>

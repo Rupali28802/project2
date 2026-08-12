@@ -38,9 +38,12 @@ function SelectedWork() {
   return (
     <section className="relative w-[95%] m-auto py-24">
       <motion.h1
+        style={{
+          fontFamily: "Playfair Display, serif",
+        }}
         initial={{ opacity: 0 }}
         // animate={{ opacity: 0.15 }}
-        whileInView={{ opacity: 0.1 }}
+        whileInView={{ opacity: 0.4 }}
         viewport={{ once: false }}
         transition={{ duration: 2 }}
         className="
@@ -51,17 +54,22 @@ function SelectedWork() {
    text-[80px]
     md:text-9xl
     font-extrabold
-    text-gray-400      
+  text-[#bd0202]
     select-none
     pointer-events-none
     whitespace-nowrap
+    tracking-widest
     z-0
+  
   "
       >
-        PORTFOLIO
+        PROJECTS
       </motion.h1>
 
       <motion.h2
+        style={{
+          fontFamily: "Playfair Display, serif",
+        }}
         // animate={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}

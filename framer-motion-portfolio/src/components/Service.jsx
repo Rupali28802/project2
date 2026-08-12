@@ -25,46 +25,55 @@ function Service() {
 
   return (
     <section className="relative w-[90%] m-auto ">
-      <div className="relative">
-        <h1
+      <div
+        style={{
+          fontFamily: "Playfair Display, serif",
+        }}
+        className="relative pt-20 md:pt-28"
+      >
+        {/* Background SERVICE */}
+        <motion.h1
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.4 }}
+          viewport={{ once: false }}
+          transition={{ duration: 2 }}
           className="
-          
-      text-left
-      text-[70px]
-      md:text-[80px]
+      absolute
+      left-1/2
+      top-0
+      -translate-x-1/2
+      text-[80px]
+      md:text-9xl
       font-extrabold
-      text-gray-300
-      leading-none
-      m-0
+      text-[#bd0202]
       select-none
       pointer-events-none
+      whitespace-nowrap
+      tracking-widest
+      z-0
     "
         >
-          PORTFOLIO
-        </h1>
+          SERVICE
+        </motion.h1>
 
+        {/* Main heading */}
         <motion.h2
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{
             duration: 1,
             delay: 0.15,
             ease: "easeOut",
           }}
           className="
-          relative
-          left-0
-       
-          -translate-y-1/3
-      text-start
+      relative
+      z-5
+      text-center
       text-3xl
       md:text-5xl
       font-bold
-
- 
-      ml-3
+       -translate-y-9
       
-      z-10
     "
         >
           /SERVICE

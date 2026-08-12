@@ -38,33 +38,54 @@ function Hero() {
               learning modern web technologies.
             </p>
 
-            {/* <a
-              href="#contact"
-              className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
-            >
-              Let’s Collaborate
-              <FiArrowUpRight />
-            </a>
-            <a
-              href="/resume.pdf"
-              download
-              className="border px-6 py-3 rounded-full"
-            >
-              Download Resume
-            </a> */}
             <div className=" flex  gap-3 text-[8px] md:text-[13px] mt-5">
               <a
                 href="#contact"
-                className="inline-flex  items-center gap-1 bg-black text-white px-6 py-3 rounded-full  hover:bg-white hover:text-black border  transition"
+                className="
+    inline-flex
+    items-center
+    justify-center
+    gap-1
+    bg-black
+    text-white
+    px-5
+    py-3
+    rounded-full
+    hover:bg-white
+    hover:text-black
+    border
+    transition
+    text-sm
+    w-full
+    sm:w-auto
+    whitespace-nowrap
+  "
               >
-                Let’s Collaborate
+                Let's Collaborate
                 <FiArrowUpRight />
               </a>
 
               <a
                 href="/RupaliWakhare_CV.pdf"
                 download
-                className="inline-flex items-center gap-2 border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
+                className="
+    inline-flex
+    items-center
+    justify-center
+    gap-2
+    border
+    border-black
+    px-5
+    py-3
+    rounded-full
+    hover:bg-black
+    hover:text-white
+    transition
+    text-sm
+    w-full
+    sm:w-auto
+    whitespace-nowrap
+  "
               >
                 Download Resume
                 <FiDownload />
