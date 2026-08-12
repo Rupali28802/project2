@@ -103,7 +103,8 @@ function Hero() {
             <img
               src={heroImg}
               alt="hero"
-              className=" w-45 h-45 rounded-full
+              className=" w-45 h-45 rounded-bl-[50px]
+              rounded-br-[50px]
       md:w-[360px] md:h-[360px] object-cover 
       md: grayscale
       md:hover:grayscale-0
