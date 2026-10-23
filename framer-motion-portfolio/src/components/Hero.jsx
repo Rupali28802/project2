@@ -103,7 +103,7 @@ function Hero() {
             <img
               src={heroImg}
               alt="hero"
-              className=" w-45 h-45 rounded-bl-[50px]
+              className="mr-40 w-45 h-45 rounded-bl-[50px]
               rounded-br-[50px]
       md:w-[360px] md:h-[360px] object-cover 
       md: grayscale
@@ -137,7 +137,7 @@ function Hero() {
               <FaLinkedin /> <span className="hidden md:inline"> LinkedIn</span>
             </a>
             <a
-              href="mailto:rupaliwakhre26@gmail.com"
+              href="mailto:rupaliwakhare184@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="w-15 h-15  md:w-40 md:h-12 ml-12 flex items-center justify-center gap-2 rounded-full shadow hover:bg-gray-100 transition"

@@ -6,9 +6,51 @@ import {
   FiSend,
   FiArrowUpRight,
 } from "react-icons/fi";
+import emailjs from "@emailjs/browser"
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { useState,useRef } from "react";
+
 
 function Contact() {
+  const formref = useRef(null);
+
+  const [issending, setIsSending] = useState(false);
+  const [status, setStatus] = useState({
+    type: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (issending) return;
+    setIsSending(true);
+    setStatus({ type: "", message: "" });
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formref.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        },
+      );
+      setStatus({
+        type: "success",
+        message: "Message sent successfully!",
+      });
+      formref.current.reset();
+    } catch (error) {
+      console.log("Email sending failed:", error);
+      setStatus({
+        type: "error",
+        message: "Message could not be sent. Please try again.",
+      });
+    } finally {
+      setIsSending(false);
+    }
+  };
   return (
     <section
       id="contact"
@@ -117,7 +159,7 @@ function Contact() {
                 <FiMail className="text-xl" />
               </div>
 
-              <span className="text-gray-600">rupaliwakhare26@gmail.com</span>
+              <span className="text-gray-600">rupaliwakhare184@gmail.com</span>
             </div>
 
             {/* Phone */}
@@ -194,10 +236,12 @@ function Contact() {
               </div>
             </div>
 
-            <form className="space-y-5">
+            <form ref={formref} onSubmit={handleSubmit} className="space-y-5">
               <input
                 type="text"
+                name="user_name"
                 placeholder="👨🏻‍💼 Your Name"
+                required
                 className="
                   w-full
                   bg-transparent
@@ -214,7 +258,9 @@ function Contact() {
 
               <input
                 type="email"
+                name="user_email"
                 placeholder="📧 Your Email"
+                required
                 className="
                   w-full
                   bg-transparent
@@ -230,8 +276,10 @@ function Contact() {
               />
 
               <textarea
+                name="message"
                 rows="5"
                 placeholder="✉ Your Message"
+                required
                 className="
                   w-full
                   bg-transparent
@@ -245,10 +293,22 @@ function Contact() {
                   transition
                   resize-none
                 "
+
               />
+              {status.message &&(
+                <p role="status"
+                className={
+                  status.type === "success"
+                  ? "text-green-400 text-sm"
+                  :"text-red-400 text-sm"
+                }>
+                  {status.message}
+                </p>
+              )}
 
               <button
                 type="submit"
+                disabled={issending}
                 className="
                   w-full
                   flex
@@ -264,8 +324,8 @@ function Contact() {
                   transition
                 "
               >
-                Send Message
-                <FiArrowUpRight />
+                {issending?"Sending...":"Send Message"}
+               {!issending && <FiArrowUpRight />}
               </button>
             </form>
           </div>
