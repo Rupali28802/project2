@@ -19,7 +19,7 @@ function Navbar() {
       <div className="flex justify-between items-center px-4 py-3 md:hidden">
         <div className="flex items-center gap-1">
           <Link to="/" className="flex items-center gap-1">
-            <img className="w-[100px] h-[50px] " src={Logo} alt={Logo}/>
+            <img className="w-[100px] h-[50px] " src={Logo} alt={Logo} />
           </Link>
         </div>
 
@@ -77,26 +77,55 @@ function Navbar() {
         </div>
 
         <ul className="flex space-x-8 font-medium">
-          <Link onClick={() => setMenuOpen(false)} to="/">
+          <Link
+            onClick={() => setMenuOpen(false)}
+            to="/"
+            className="hover:underline hover:decoration-green-500 hover:text-[#bd0202]"
+          >
             Home
           </Link>
           <li>
-            <a href="#about">About</a>
+            <a
+              href="#about"
+              className="hover:underline hover:decoration-green-500 hover:text-[#bd0202]"
+            >
+              About
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a
+              href="#projects"
+              className="hover:underline hover:decoration-green-500 hover:text-[#bd0202]"
+            >
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a
+              href="#services"
+              className="hover:underline hover:decoration-green-500 hover:text-[#bd0202]"
+            >
+              Services
+            </a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a
+              href="#skills"
+              className="hover:underline hover:decoration-green-500 hover:text-[#bd0202]"
+            >
+              Skills
+            </a>
           </li>
           {/* <li>
             <a href="#resume">Resume</a>
           </li> */}
           <li>
-            <a href="#contact">Contact</a>
+            <a
+              href="#contact"
+              className="hover:underline hover:decoration-green-500 hover:text-[#bd0202]"
+            >
+              Contact
+            </a>
           </li>
         </ul>
 

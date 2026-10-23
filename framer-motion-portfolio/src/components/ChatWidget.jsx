@@ -61,9 +61,8 @@ const ChatWidget = ({onClose}) => {
       <div className="flex items-center justify-between bg-black px-4 py-3 text-white">
         {/* Header */}
         <div className="flex ">
-          
           <FaRobot size={20} className="text-shadow-white" />
-          <h3 className="font-semibold ml-2 mt-0">Chatbot</h3>
+          <h3 className="font-semibold ml-2 mt-0">Chat with Me</h3>
         </div>
         <button onClick={onClose} className="text-xl">
           <FiX />
@@ -83,9 +82,7 @@ const ChatWidget = ({onClose}) => {
             </div>
           </div>
         ))}
-        {loading && (
-          <div className="text-sm text-gray-500">Typing...</div>
-        )}
+        {loading && <div className="text-sm text-gray-500">Typing...</div>}
       </div>
       {/* Input */}
       <div className=" p-3 flex gap-2">
