@@ -168,7 +168,7 @@ function Contact() {
                 <FiPhone className="text-xl" />
               </div>
 
-              <span className="text-gray-600">+91 93562 35644</span>
+              <span className="text-gray-600">+91 9356235644</span>
             </div>
 
             {/* Location */}
