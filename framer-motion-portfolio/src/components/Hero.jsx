@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin,
   // FaInstagram, FaTwitter 
 } from "react-icons/fa";
 import heroImg from "../assets/hero.jpeg";
+import resume from "../assets/Rupali_Wakhare_Full_Stack_Developer_Resume.pdf"
 
 function Hero() {
   return (
@@ -66,7 +67,7 @@ function Hero() {
               </a>
 
               <a
-                href="/RupaliWakhare_CV.pdf"
+                href={resume}
                 download
                 className="
     inline-flex

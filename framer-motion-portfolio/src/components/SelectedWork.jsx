@@ -13,21 +13,20 @@ function SelectedWork() {
   const [filter, setFilter] = useState("All");
   const projects = [
     {
-      title: "Portfolio Website",
-      desc: "A responsive personal portfolio showcasing skills, services, and projects. Designed with React, TailwindCSS, and Framer Motion for smooth animations and modern UI.",
-      // studio: "Kumpin Studio",
-      // tag: "Real Project",
+      title: "ZaykaGo – Food Delivery Web Application",
+      desc: "A full-stack food delivery platform built using the MERN stack with a modern and responsive UI. Developed customer features including food browsing, category filtering, cart, and online ordering. Built a responsive Admin Dashboard for food, user, order, and revenue management with RESTful API integration, JWT authentication, Cloudinary image management, and Framer Motion animations.",
+      techStack:
+        "React.js, Node.js, Express.js, MongoDB, Mongoose, JWT, Cloudinary, Framer Motion, Vercel",
       img: Project1,
-      link: "https://github.com/Rupali28802/project2/tree/main/framer-motion-portfolio",
+      link: "https://github.com/Rupali28802/Restrorent-",
     },
 
     {
-      title: "E-Commerce Website",
-      desc: "A full‑stack rental e‑commerce platform built with MERN stack. Features include product catalog, cart, wishlist, checkout with Razorpay integration, and admin dashboard for managing users, orders, and payments.",
-      // studio: "Kumpin Studio",
-      // tag: "Exploration",
-      // img: Work3,
-      img:Project2,
+      title: "RentEase – Rental E-Commerce Platform",
+      desc: "A full-stack rental e-commerce platform built using React.js, Tailwind CSS, Node.js, Express.js, and MongoDB. Developed features for product browsing, rental management, cart, wishlist, checkout, and order processing. Implemented 25+ RESTful APIs, JWT authentication, Razorpay integration, and a responsive Admin Dashboard for managing products, users, orders, payments, and rental activities.",
+      techStack:
+        "React.js, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB, JWT, Razorpay",
+      img: Project2,
       link: "https://github.com/Rupali28802/rentease-furniture-rental",
     },
   ];
@@ -184,7 +183,13 @@ function SelectedWork() {
                 {proj.tag}
               </span>
               <h3 className="text-xl font-semibold mt-2">{proj.title}</h3>
-              <p className="text-gray-500 mb-2">{proj.desc}</p>
+
+              <p className="text-gray-500 mb-4 text-justify leading-relaxed">{proj.desc}</p>
+
+              <p className="text-sm text-gray-700 mb-4">
+                <span className="font-semibold">Tech Stack:</span>{" "}
+                {proj.techStack}
+              </p>
               <span className="text-sm text-gray-400">{proj.studio}</span>
               {proj.link && (
                 <a
