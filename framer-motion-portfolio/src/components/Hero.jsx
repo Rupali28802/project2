@@ -33,7 +33,7 @@ function Hero() {
               Full-Stack Developer || MERN
             </h2>
             <p className="text-gray-500 text-justify leading-5 tracking-normal text-[15px] md:text-[13px] md:w-[330px] ">
-              Aspiring Full Stack MERN Developer with hands-on experience in
+              Full Stack MERN Developer with hands-on experience in
               React.js, Node.js, Express.js, and MongoDB. Passionate about
               creating responsive, user-centric applications and continuously
               learning modern web technologies.
